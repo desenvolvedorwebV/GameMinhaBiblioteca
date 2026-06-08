@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<livros categoria="Arte">
+
+    <livro>
+        <isbn>9786554273015</isbn>
+        <titulo>História Da Arte Descolonial - Uma Introdução Metodológica</titulo>
+        <serie></serie>
+        <numeroSerie></numeroSerie>
+        <sinopse></sinopse>
+        <capa>https://raw.githubusercontent.com/desenvolvedorwebV/GameMinhaBiblioteca/refs/heads/main/Imagens/Livros/Arte/978-6554273015.jpg</capa>
+    </livro>
+
+    <livro>
+        <isbn>9786555872286</isbn>
+        <titulo>ARTE e BELEZA na Estética Medieval</titulo>
+        <serie></serie>
+        <numeroSerie></numeroSerie>
+        <sinopse></sinopse>
+        <capa>https://raw.githubusercontent.com/desenvolvedorwebV/GameMinhaBiblioteca/refs/heads/main/Imagens/Livros/Arte/978-6555872286.jpg</capa>
+    </livro>
+
+    <livro>
+        <isbn>9786556910475</isbn>
+        <titulo></titulo>
+        <serie></serie>
+        <numeroSerie></numeroSerie>
+        <sinopse></sinopse>
+        <capa>https://raw.githubusercontent.com/desenvolvedorwebV/GameMinhaBiblioteca/refs/heads/main/Imagens/Livros/Arte/978-6556910475.jpg</capa>
+    </livro>
+
+    <livro>
+        <isbn>9786559791194</isbn>
+        <titulo></titulo>
+        <serie></serie>
+        <numeroSerie></numeroSerie>
+        <sinopse></sinopse>
+        <capa>https://raw.githubusercontent.com/desenvolvedorwebV/GameMinhaBiblioteca/refs/heads/main/Imagens/Livros/Arte/978-6559791194.jpg</capa>
+    </livro>
+
+    <livro>
+        <isbn>9786560920408</isbn>
+        <titulo></titulo>
+        <serie></serie>
+        <numeroSerie></numeroSerie>
+        <sinopse></sinopse>
+        <capa>https://raw.githubusercontent.com/desenvolvedorwebV/GameMinhaBiblioteca/refs/heads/main/Imagens/Livros/Arte/978-6560920408.jpg</capa>
+    </livro>
+
+    <livro>
+        <isbn>9786560920415</isbn>
+        <titulo></titulo>
+        <serie></serie>
+        <numeroSerie></numeroSerie>
+        <sinopse></sinopse>
+        <capa>https://raw.githubusercontent.com/desenvolvedorwebV/GameMinhaBiblioteca/refs/heads/main/Imagens/Livros/Arte/978-6560920415.jpg</capa>
+    </livro>
+
+    <livro>
+        <isbn>9786560920606</isbn>
+        <titulo></titulo>
+        <serie></serie>
+        <numeroSerie></numeroSerie>
+        <sinopse></sinopse>
+        <capa>https://raw.githubusercontent.com/desenvolvedorwebV/GameMinhaBiblioteca/refs/heads/main/Imagens/Livros/Arte/978-6560920606.jpg</capa>
+    </livro>
+
+    <livro>
+        <isbn>9786560920613</isbn>
+        <titulo></titulo>
+        <serie></serie>
+        <numeroSerie></numeroSerie>
+        <sinopse></sinopse>
+        <capa>https://raw.githubusercontent.com/desenvolvedorwebV/GameMinhaBiblioteca/refs/heads/main/Imagens/Livros/Arte/978-6560920613.jpg</capa>
+    </livro>
+
+    <livro>
+        <isbn>9786583239112</isbn>
+        <titulo></titulo>
+        <serie></serie>
+        <numeroSerie></numeroSerie>
+        <sinopse></sinopse>
+        <capa>https://raw.githubusercontent.com/desenvolvedorwebV/GameMinhaBiblioteca/refs/heads/main/Imagens/Livros/Arte/978-6583239112.jpg</capa>
+    </livro>
+
+    <livro>
+        <isbn>9786587638379</isbn>
+        <titulo></titulo>
+        <serie></serie>
+        <numeroSerie></numeroSerie>
+        <sinopse></sinopse>
+        <capa>https://raw.githubusercontent.com/desenvolvedorwebV/GameMinhaBiblioteca/refs/heads/main/Imagens/Livros/Arte/978-6587638379.jpg</capa>
+    </livro>
+
+    <livro>
+        <isbn>9786587638720</isbn>
+        <titulo></titulo>
+        <serie></serie>
+        <numeroSerie></numeroSerie>
+        <sinopse></sinopse>
+        <capa>https://raw.githubusercontent.com/desenvolvedorwebV/GameMinhaBiblioteca/refs/heads/main/Imagens/Livros/Arte/978-6587638720.jpg</capa>
+    </livro>
+
+    <livro>
+        <isbn>9786589741442</isbn>
+        <titulo></titulo>
+        <serie></serie>
+        <numeroSerie></numeroSerie>
+        <sinopse></sinopse>
+        <capa>https://raw.githubusercontent.com/desenvolvedorwebV/GameMinhaBiblioteca/refs/heads/main/Imagens/Livros/Arte/978-6589741442.jpg</capa>
+    </livro>
+
+    <livro>
+        <isbn>9786589828426</isbn>
+        <titulo></titulo>
+        <serie></serie>
+        <numeroSerie></numeroSerie>
+        <sinopse></sinopse>
+        <capa>https://raw.githubusercontent.com/desenvolvedorwebV/GameMinhaBiblioteca/refs/heads/main/Imagens/Livros/Arte/978-6589828426.jpg</capa>
+    </livro>
+
+    <livro>
+        <isbn>9786599770593</isbn>
+        <titulo></titulo>
+        <serie></serie>
+        <numeroSerie></numeroSerie>
+        <sinopse></sinopse>
+        <capa>https://raw.githubusercontent.com/desenvolvedorwebV/GameMinhaBiblioteca/refs/heads/main/Imagens/Livros/Arte/978-6599770593.jpg</capa>
+    </livro>
+
+    <livro>
+        <isbn>9788501402479</isbn>
+        <titulo></titulo>
+        <serie></serie>
+        <numeroSerie></numeroSerie>
+        <sinopse></sinopse>
+        <capa>https://raw.githubusercontent.com/desenvolvedorwebV/GameMinhaBiblioteca/refs/heads/main/Imagens/Livros/Arte/978-8501402479.jpg</capa>
+    </livro>
+
+    <livro>
+        <isbn>9788508193363</isbn>
+        <titulo></titulo>
+        <serie></serie>
+        <numeroSerie></numeroSerie>
+        <sinopse></sinopse>
+        <capa>https://raw.githubusercontent.com/desenvolvedorwebV/GameMinhaBiblioteca/refs/heads/main/Imagens/Livros/Arte/978-8508193363.jpg</capa>
+    </livro>
+
+    <livro>
+        <isbn>9788525437167</isbn>
+        <titulo></titulo>
+        <serie></serie>
+        <numeroSerie></numeroSerie>
+        <sinopse></sinopse>
+        <capa>https://raw.githubusercontent.com/desenvolvedorwebV/GameMinhaBiblioteca/refs/heads/main/Imagens/Livros/Arte/978-8525437167.jpg</capa>
+    </livro>
+
+    <livro>
+        <isbn>9788525438720</isbn>
+        <titulo></titulo>
+        <serie></serie>
+        <numeroSerie></numeroSerie>
+        <sinopse></sinopse>
+        <capa>https://raw.githubusercontent.com/desenvolvedorwebV/GameMinhaBiblioteca/refs/heads/main/Imagens/Livros/Arte/978-8525438720.jpg</capa>
+    </livro>
+
+    <livro>
+        <isbn>9788526810259</isbn>
+        <titulo></titulo>
+        <serie></serie>
+        <numeroSerie></numeroSerie>
+        <sinopse></sinopse>
+        <capa>https://raw.githubusercontent.com/desenvolvedorwebV/GameMinhaBiblioteca/refs/heads/main/Imagens/Livros/Arte/978-8526810259.jpg</capa>
+    </livro>
+
+    <livro>
+        <isbn>9788526810839</isbn>
+        <titulo></titulo>
+        <serie></serie>
+        <numeroSerie></numeroSerie>
+        <sinopse></sinopse>
+        <capa>https://raw.githubusercontent.com/desenvolvedorwebV/GameMinhaBiblioteca/refs/heads/main/Imagens/Livros/Arte/978-8526810839.jpg</capa>
+    </livro>
+
+    <livro>
+        <isbn>9788537810866</isbn>
+        <titulo></titulo>
+        <serie></serie>
+        <numeroSerie></numeroSerie>
+        <sinopse></sinopse>
+        <capa>https://raw.githubusercontent.com/desenvolvedorwebV/GameMinhaBiblioteca/refs/heads/main/Imagens/Livros/Arte/978-8537810866.jpg</capa>
+    </livro>
+
+    <livro>
+        <isbn>9788537815052</isbn>
+        <titulo></titulo>
+        <serie></serie>
+        <numeroSerie></numeroSerie>
+        <sinopse></sinopse>
+        <capa>https://raw.githubusercontent.com/desenvolvedorwebV/GameMinhaBiblioteca/refs/heads/main/Imagens/Livros/Arte/978-8537815052.jpg</capa>
+    </livro>
+
+    <livro>
+        <isbn>9788538060253</isbn>
+        <titulo></titulo>
+        <serie></serie>
+        <numeroSerie></numeroSerie>
+        <sinopse></sinopse>
+        <capa>https://raw.githubusercontent.com/desenvolvedorwebV/GameMinhaBiblioteca/refs/heads/main/Imagens/Livros/Arte/978-8538060253.jpg</capa>
+    </livro>
+
+    <livro>
+        <isbn>9788539632640</isbn>
+        <titulo></titulo>
+        <serie></serie>
+        <numeroSerie></numeroSerie>
+        <sinopse></sinopse>
+        <capa>https://raw.githubusercontent.com/desenvolvedorwebV/GameMinhaBiblioteca/refs/heads/main/Imagens/Livros/Arte/978-8539632640.jpg</capa>
+    </livro>
+
+    <livro>
+        <isbn>9788543105543</isbn>
+        <titulo></titulo>
+        <serie></serie>
+        <numeroSerie></numeroSerie>
+        <sinopse></sinopse>
+        <capa>https://raw.githubusercontent.com/desenvolvedorwebV/GameMinhaBiblioteca/refs/heads/main/Imagens/Livros/Arte/978-8543105543.jpg</capa>
+    </livro>
+
+    <livro>
+        <isbn>9788543110295</isbn>
+        <titulo></titulo>
+        <serie></serie>
+        <numeroSerie></numeroSerie>
+        <sinopse></sinopse>
+        <capa>https://raw.githubusercontent.com/desenvolvedorwebV/GameMinhaBiblioteca/refs/heads/main/Imagens/Livros/Arte/978-8543110295.jpg</capa>
+    </livro>
+
+    <livro>
+        <isbn>9788543111797</isbn>
+        <titulo></titulo>
+        <serie></serie>
+        <numeroSerie></numeroSerie>
+        <sinopse></sinopse>
+        <capa>https://raw.githubusercontent.com/desenvolvedorwebV/GameMinhaBiblioteca/refs/heads/main/Imagens/Livros/Arte/978-8543111797.jpg</capa>
+    </livro>
+
+    <livro>
+        <isbn>9788554862947</isbn>
+        <titulo></titulo>
+        <serie></serie>
+        <numeroSerie></numeroSerie>
+        <sinopse></sinopse>
+        <capa>https://raw.githubusercontent.com/desenvolvedorwebV/GameMinhaBiblioteca/refs/heads/main/Imagens/Livros/Arte/978-8554862947.jpg</capa>
+    </livro>
+
+    <livro>
+        <isbn>9788555910159</isbn>
+        <titulo></titulo>
+        <serie></serie>
+        <numeroSerie></numeroSerie>
+        <sinopse></sinopse>
+        <capa>https://raw.githubusercontent.com/desenvolvedorwebV/GameMinhaBiblioteca/refs/heads/main/Imagens/Livros/Arte/978-8555910159.jpg</capa>
+    </livro>
+
+    <livro>
+        <isbn>9788555911033</isbn>
+        <titulo></titulo>
+        <serie></serie>
+        <numeroSerie></numeroSerie>
+        <sinopse></sinopse>
+        <capa>https://raw.githubusercontent.com/desenvolvedorwebV/GameMinhaBiblioteca/refs/heads/main/Imagens/Livros/Arte/978-8555911033.jpg</capa>
+    </livro>
+
+    <livro>
+        <isbn>9788562938207</isbn>
+        <titulo></titulo>
+        <serie></serie>
+        <numeroSerie></numeroSerie>
+        <sinopse></sinopse>
+        <capa>https://raw.githubusercontent.com/desenvolvedorwebV/GameMinhaBiblioteca/refs/heads/main/Imagens/Livros/Arte/978-8562938207.jpg</capa>
+    </livro>
+
+    <livro>
+        <isbn>9788578276126</isbn>
+        <titulo></titulo>
+        <serie></serie>
+        <numeroSerie></numeroSerie>
+        <sinopse></sinopse>
+        <capa>https://raw.githubusercontent.com/desenvolvedorwebV/GameMinhaBiblioteca/refs/heads/main/Imagens/Livros/Arte/978-8578276126.jpg</capa>
+    </livro>
+
+    <livro>
+        <isbn>9788580632095</isbn>
+        <titulo></titulo>
+        <serie></serie>
+        <numeroSerie></numeroSerie>
+        <sinopse></sinopse>
+        <capa>https://raw.githubusercontent.com/desenvolvedorwebV/GameMinhaBiblioteca/refs/heads/main/Imagens/Livros/Arte/978-8580632095.jpg</capa>
+    </livro>
+
+    <!-- Série AA -->
+
+    <livro>
+        <isbn>9786588280126</isbn>
+        <titulo></titulo>
+        <serie>AA</serie>
+        <numeroSerie>1</numeroSerie>
+        <sinopse></sinopse>
+        <capa>https://raw.githubusercontent.com/desenvolvedorwebV/GameMinhaBiblioteca/refs/heads/main/Imagens/Livros/Arte/AA01_978-6588280126.jpg</capa>
+    </livro>
+
+    <livro>
+        <isbn>9786588280089</isbn>
+        <titulo></titulo>
+        <serie>AA</serie>
+        <numeroSerie>2</numeroSerie>
+        <sinopse></sinopse>
+        <capa>https://raw.githubusercontent.com/desenvolvedorwebV/GameMinhaBiblioteca/refs/heads/main/Imagens/Livros/Arte/AA02_978-6588280089.jpg</capa>
+    </livro>
+
+    <livro>
+        <isbn>9786588280324</isbn>
+        <titulo></titulo>
+        <serie>AA</serie>
+        <numeroSerie>3</numeroSerie>
+        <sinopse></sinopse>
+        <capa>https://raw.githubusercontent.com/desenvolvedorwebV/GameMinhaBiblioteca/refs/heads/main/Imagens/Livros/Arte/AA03_978-6588280324.jpg</capa>
+    </livro>
+
+    <livro>
+        <isbn>9786588280331</isbn>
+        <titulo></titulo>
+        <serie>AA</serie>
+        <numeroSerie>4</numeroSerie>
+        <sinopse></sinopse>
+        <capa>https://raw.githubusercontent.com/desenvolvedorwebV/GameMinhaBiblioteca/refs/heads/main/Imagens/Livros/Arte/AA04_978-6588280331.jpg</capa>
+    </livro>
+
+    <livro>
+        <isbn>9786588280065</isbn>
+        <titulo></titulo>
+        <serie>AA</serie>
+        <numeroSerie>5</numeroSerie>
+        <sinopse></sinopse>
+        <capa>https://raw.githubusercontent.com/desenvolvedorwebV/GameMinhaBiblioteca/refs/heads/main/Imagens/Livros/Arte/AA05_978-6588280065.jpg</capa>
+    </livro>
+
+    <livro>
+        <isbn>9786588280294</isbn>
+        <titulo></titulo>
+        <serie>AA</serie>
+        <numeroSerie>6</numeroSerie>
+        <sinopse></sinopse>
+        <capa>https://raw.githubusercontent.com/desenvolvedorwebV/GameMinhaBiblioteca/refs/heads/main/Imagens/Livros/Arte/AA06_978-6588280294.jpg</capa>
+    </livro>
+
+    <livro>
+        <isbn>9786588280638</isbn>
+        <titulo></titulo>
+        <serie>AA</serie>
+        <numeroSerie>7</numeroSerie>
+        <sinopse></sinopse>
+        <capa>https://raw.githubusercontent.com/desenvolvedorwebV/GameMinhaBiblioteca/refs/heads/main/Imagens/Livros/Arte/AA07_978-6588280638.jpg</capa>
+    </livro>
+
+    <livro>
+        <isbn>9786588280645</isbn>
+        <titulo></titulo>
+        <serie>AA</serie>
+        <numeroSerie>8</numeroSerie>
+        <sinopse></sinopse>
+        <capa>https://raw.githubusercontent.com/desenvolvedorwebV/GameMinhaBiblioteca/refs/heads/main/Imagens/Livros/Arte/AA08_978-6588280645.jpg</capa>
+    </livro>
+
+    <livro>
+        <isbn>9786588280829</isbn>
+        <titulo></titulo>
+        <serie>AA</serie>
+        <numeroSerie>9</numeroSerie>
+        <sinopse></sinopse>
+        <capa>https://raw.githubusercontent.com/desenvolvedorwebV/GameMinhaBiblioteca/refs/heads/main/Imagens/Livros/Arte/AA09_978-6588280829.jpg</capa>
+    </livro>
+
+    <livro>
+        <isbn>9786588280997</isbn>
+        <titulo></titulo>
+        <serie>AA</serie>
+        <numeroSerie>10</numeroSerie>
+        <sinopse></sinopse>
+        <capa>https://raw.githubusercontent.com/desenvolvedorwebV/GameMinhaBiblioteca/refs/heads/main/Imagens/Livros/Arte/AA10_978-6588280997.jpg</capa>
+    </livro>
+
+</livros>
