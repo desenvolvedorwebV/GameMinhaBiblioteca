@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ajude o Autor</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;font-family:Arial,sans-serif;gap:20px;padding:20px;text-align:center;user-select:none;-webkit-user-select:none;overflow:hidden;background:#fafafa;}
+
+#vidas{font-size:32px}
+#fase{font-size:22px;font-weight:bold;max-width:350px}
+#tempo{font-size:20px}
+
+.barra{
+width:min(350px,90vw);
+height:35px;
+border:2px solid black;
+overflow:hidden;
+border-radius:8px;
+background:white;
+}
+
+#progresso{
+width:20%;
+height:100%;
+background:crimson;
+transition:width .1s linear;
+}
+
+button{
+width:min(300px,90vw);
+height:90px;
+font-size:24px;
+font-weight:bold;
+cursor:pointer;
+touch-action:manipulation;
+border-radius:12px;
+border:none;
+background:#3b82f6;
+color:white;
+}
+
+button:disabled{
+opacity:.5;
+cursor:default;
+}
+
+#mensagem{
+height:24px;
+font-size:16px;
+font-weight:bold;
+}
+
+#dica{
+font-size:14px;
+color:#666;
+max-width:300px;
+}
+
+.toast{
+position:fixed;
+top:20px;
+left:50%;
+transform:translateX(-50%);
+background:#222;
+color:white;
+padding:12px 20px;
+border-radius:999px;
+opacity:0;
+transition:.3s;
+z-index:1000;
+}
+
+.toast.show{opacity:1}
+
+.coin{
+position:fixed;
+width:36px;
+height:36px;
+pointer-events:none;
+z-index:3000;
+animation-name:fall;
+animation-timing-function:linear;
+animation-fill-mode:forwards;
+}
+
+@keyframes fall{
+0%
+{
+    transform:
+        translateX(0px)
+        translateY(0px)
+        rotate(0deg);
+    opacity:1;
+}
+
+100%
+{
+    transform:
+        translateX(var(--vento))
+        translateY(calc(120vh + 600px))
+        rotate(var(--rotacao));
+    opacity:1;
+}
+}
+
+#telaFinal{
+display:none;
+flex-direction:column;
+align-items:center;
+gap:20px;
+}
+
+#tituloFinal{
+font-size:34px;
+}
+
+#textoFinal{
+font-size:22px;
+}
+
+#reward{
+font-size:64px;
+font-weight:bold;
+color:#ffd700;
+display:none;
+text-shadow:0 0 10px rgba(255,215,0,.6);
+}
+</style>
+</head>
+<body>
+
+<div id="toast" class="toast"></div>
+
+<div id="vidas">📚📚📚</div>
+
+<div id="fase">1/5 - Ajudando o autor a ter uma ideia</div>
+
+<div id="tempo">Tempo: 20 segundo(s)</div>
+
+<div class="barra">
+<div id="progresso"></div>
+</div>
+
+<button id="botao">AJUDAR O AUTOR</button>
+
+<div id="mensagem"></div>
+
+<div id="dica">
+Toques rápidos geram mais inspiração.
+</div>
+
+<div id="telaFinal">
+<h2 id="tituloFinal"></h2>
+<p id="textoFinal"></p>
+<div id="reward"></div>
+</div>
+
+<script>
+const META_BARRA=200;
+
+const fases=[
+{tempo:20,ganho:7,perda:5},
+{tempo:20,ganho:7,perda:9},
+{tempo:18,ganho:6,perda:14},
+{tempo:18,ganho:6,perda:20},
+{tempo:15,ganho:5,perda:25}
+];
+
+const nomesFases=[
+"Ajudando o autor a ter uma ideia",
+"Ajudando o autor a planejar a história",
+"Ajudando o autor a escrever<br>",
+"Ajudando o autor a revisar<br>",
+"Ajudando o autor a publicar<br>"
+];
+
+const mensagens=[
+"A ideia surgiu!",
+"O planejamento está pronto!",
+"O rascunho foi concluído!",
+"A revisão terminou!",
+"Preparando a publicação..."
+];
+
+let vida=3;
+let fase=0;
+let barra=40;
+let tempo=fases[0].tempo;
+let ultimoClique=0;
+let emTransicao=false;
+let fasesConcluidas=0;
+
+const vidasEl=document.getElementById("vidas");
+const faseEl=document.getElementById("fase");
+const tempoEl=document.getElementById("tempo");
+const progressoEl=document.getElementById("progresso");
+const botao=document.getElementById("botao");
+const mensagemEl=document.getElementById("mensagem");
+
+function toast(txt){
+const el=document.getElementById("toast");
+el.textContent=txt;
+el.classList.add("show");
+setTimeout(()=>el.classList.remove("show"),1800);
+}
+
+function atualizarCorBarra(){
+if(barra<70) progressoEl.style.background="crimson";
+else if(barra<140) progressoEl.style.background="gold";
+else progressoEl.style.background="limegreen";
+}
+
+function atualizarTela(){
+vidasEl.textContent="📚".repeat(vida);
+
+if(fase<fases.length)
+faseEl.innerHTML=`${fase+1}/5 - ${nomesFases[fase]}`;
+
+tempoEl.textContent=`Tempo: ${Math.ceil(tempo)} segundo(s)`;
+
+progressoEl.style.width=
+`${Math.max(0,Math.min(100,(barra/META_BARRA)*100))}%`;
+
+atualizarCorBarra();
+}
+
+function reiniciarFase(){
+barra=40;
+tempo=fases[fase].tempo;
+}
+
+function calcularMoedas(){
+return Math.min(5,fasesConcluidas+1);
+}
+
+function mostrarTelaFinal(titulo,texto){
+
+document.getElementById("vidas").style.display="none";
+document.getElementById("fase").style.display="none";
+document.getElementById("tempo").style.display="none";
+document.querySelector(".barra").style.display="none";
+document.getElementById("botao").style.display="none";
+document.getElementById("mensagem").style.display="none";
+document.getElementById("dica").style.display="none";
+
+const tela=document.getElementById("telaFinal");
+tela.style.display="flex";
+
+document.getElementById("tituloFinal").textContent=titulo;
+document.getElementById("textoFinal").textContent=texto;
+}
+
+function chuvaMoedas()
+{
+    for(let i=0;i<120;i++)
+    {
+        const moeda =
+            document.createElement("img");
+
+        moeda.src = "hud/dinheiro.png";
+        moeda.className = "coin";
+
+        moeda.style.left =
+            Math.random()*100 + "vw";
+
+        moeda.style.top =
+            (-1000 + Math.random()*900) + "px";
+
+        moeda.style.animationDelay =
+            (Math.random()*2) + "s";
+
+        moeda.style.animationDuration =
+            (2 + Math.random()*4) + "s";
+
+        moeda.style.setProperty(
+            "--vento",
+            (-150 + Math.random()*300) + "px"
+        );
+
+        moeda.style.setProperty(
+            "--rotacao",
+            (-2160 + Math.random()*4320) + "deg"
+        );
+
+        document.body.appendChild(moeda);
+
+        setTimeout(() =>
+        {
+            moeda.remove();
+        }, 8000);
+    }
+}
+
+function encerrarDerrota(){
+
+clearInterval(loop);
+
+const moedas=calcularMoedas();
+
+mostrarTelaFinal(
+"Projeto Abandonado",
+`Você concluiu ${fasesConcluidas} de 5 fases.`
+);
+
+chuvaMoedas();
+
+setTimeout(()=>{
+const reward=document.getElementById("reward");
+reward.style.display="block";
+reward.textContent=`+${moedas} MOEDA${moedas>1?"S":""}`;
+},3500);
+}
+
+function encerrarVitoria(){
+
+clearInterval(loop);
+
+const moedas=calcularMoedas();
+
+mostrarTelaFinal(
+"📚 Livro Publicado!",
+"Recebendo pagamento..."
+);
+
+chuvaMoedas();
+
+setTimeout(()=>{
+const reward=document.getElementById("reward");
+reward.style.display="block";
+reward.textContent=`+${moedas} MOEDA${moedas>1?"S":""}`;
+},3500);
+}
+
+function perderVida(){
+
+if(emTransicao) return;
+
+vida--;
+
+if(vida<=0){
+encerrarDerrota();
+return;
+}
+
+toast("📚 Vida perdida!");
+reiniciarFase();
+atualizarTela();
+}
+
+function proximaFase(){
+
+if(emTransicao) return;
+
+emTransicao=true;
+
+botao.disabled=true;
+
+mensagemEl.textContent=mensagens[fase];
+
+setTimeout(()=>{
+
+fasesConcluidas++;
+fase++;
+
+if(fase>=fases.length){
+encerrarVitoria();
+return;
+}
+
+reiniciarFase();
+
+mensagemEl.textContent="";
+
+botao.disabled=false;
+
+emTransicao=false;
+
+atualizarTela();
+
+},1500);
+}
+
+botao.addEventListener("click",()=>{
+
+if(emTransicao) return;
+
+const agora=Date.now();
+
+let ganho;
+
+if(agora-ultimoClique<300)
+ganho=fases[fase].ganho*1.5;
+else
+ganho=fases[fase].ganho;
+
+ultimoClique=agora;
+
+barra+=ganho;
+
+if(barra>=META_BARRA){
+
+barra=META_BARRA;
+
+atualizarTela();
+
+proximaFase();
+
+return;
+}
+
+atualizarTela();
+});
+
+const loop=setInterval(()=>{
+
+if(emTransicao) return;
+
+barra-=fases[fase].perda*0.1;
+tempo-=0.1;
+
+if(barra<=0){
+barra=0;
+perderVida();
+return;
+}
+
+if(tempo<=0){
+perderVida();
+return;
+}
+
+if(barra<50)
+mensagemEl.textContent="O autor está desanimado!";
+else if(barra>100)
+mensagemEl.textContent="O autor está inspirado!";
+else
+mensagemEl.textContent="";
+
+atualizarTela();
+
+},100);
+
+atualizarTela();
+</script>
+
+</body>
+</html>

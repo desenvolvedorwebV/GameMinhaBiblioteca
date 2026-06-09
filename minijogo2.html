@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Entrega de Livros</title>
+
+<style>
+
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    user-select:none;
+    -webkit-user-select:none;
+}
+
+body
+{
+    background:#46415D;
+    font-family:Arial,sans-serif;
+    overflow:hidden;
+}
+
+#hud
+{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:10px;
+    background:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:100;
+    font-weight:bold;
+}
+
+#vidas
+{
+    font-size:24px;
+}
+
+#jogo
+{
+    position:relative;
+    width:100vw;
+    height:100vh;
+    overflow:hidden;
+}
+
+.estrada
+{
+    background-image:url("rua.png");
+    background-repeat:repeat-y;
+    background-size:100% auto;
+    background-position:center top;
+}
+
+.faixa
+{
+    position:absolute;
+    top:0;
+    width:33.333%;
+    height:100%;
+    /*border-left:1px dashed rgba(255,255,255,.3);*/
+    z-index:0;
+}
+
+#faixa1{left:0;}
+#faixa2{left:33.333%;}
+#faixa3{left:66.666%;}
+
+#player
+{
+    position:absolute;
+    width:72px;
+    height:72px;
+    bottom:40px;
+    left:50%;
+    transform:translateX(-50%);
+    transition:left .15s;
+    z-index:50;
+}
+
+.item
+{
+    position:absolute;
+    width:56px;
+    height:56px;
+    z-index:10;
+}
+
+#resultado
+{
+    position:fixed;
+    inset:0;
+    background:white;
+    display:none;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+    text-align:center;
+    padding:20px;
+    z-index:500;
+}
+
+#resultado h1
+{
+    font-size:36px;
+}
+
+#resultado p
+{
+    font-size:22px;
+}
+
+#moedas
+{
+    font-size:56px;
+    color:goldenrod;
+    font-weight:bold;
+}
+
+</style>
+</head>
+<body>
+
+<div id="hud">
+
+<div id="vidas">🚚🚚🚚</div>
+
+<div>
+📚 Entregas: <span id="entregas">0</span>
+</div>
+
+<div>
+⏳ <span id="tempo">20</span>seg
+</div>
+
+</div>
+
+<div id="jogo">
+
+<div class="faixa estrada" id="faixa1"></div>
+<div class="faixa estrada" id="faixa2"></div>
+<div class="faixa estrada" id="faixa3"></div>
+
+<img id="player" src="entregador.png">
+
+</div>
+
+<div id="resultado">
+
+<h1>📚 Entregas Concluídas!</h1>
+
+<p id="textoFinal"></p>
+
+<div id="moedas"></div>
+
+</div>
+
+<script>
+let scrollEstrada = 0;
+const TAMANHO_ITEM = 56;
+const jogo = document.getElementById("jogo");
+const player = document.getElementById("player");
+
+const entregasEl = document.getElementById("entregas");
+const tempoEl = document.getElementById("tempo");
+const vidasEl = document.getElementById("vidas");
+
+const resultado = document.getElementById("resultado");
+const textoFinal = document.getElementById("textoFinal");
+const moedasEl = document.getElementById("moedas");
+
+let faixa = 1;
+
+let vidas = 3;
+let entregas = 0;
+let tempo = 20;
+
+let acabou = false;
+
+const faixas =
+[
+    16.66,
+    50,
+    83.33
+];
+
+function atualizarPlayer()
+{
+    player.style.left = faixas[faixa] + "%";
+}
+
+atualizarPlayer();
+
+document.addEventListener("pointerdown",(e)=>
+{
+    if(acabou) return;
+
+    const metade =
+        window.innerWidth / 2;
+
+    if(e.clientX < metade)
+    {
+        faixa--;
+    }
+    else
+    {
+        faixa++;
+    }
+
+    if(faixa < 0)
+        faixa = 0;
+
+    if(faixa > 2)
+        faixa = 2;
+
+    atualizarPlayer();
+});
+
+function atualizarVidas()
+{
+    vidasEl.textContent =
+        "🚚".repeat(vidas);
+}
+
+function criarObjeto()
+{
+    if(acabou) return;
+
+    const obj =
+        document.createElement("img");
+
+    const livro =
+        Math.random() < 0.55;
+
+    obj.src =
+        livro
+        ? "livro.png"
+        : (
+            Math.random() < 0.5
+            ? "obstaculo1.png"
+            : "obstaculo2.png"
+        );
+
+    obj.className = "item";
+
+    const faixaObj =
+        Math.floor(Math.random()*3);
+
+    obj.dataset.tipo =
+        livro ? "livro" : "obstaculo";
+
+    obj.style.left =
+    `calc(${faixas[faixaObj]}% - ${TAMANHO_ITEM/2}px)`;
+
+    obj.style.top = "60px";
+
+    jogo.appendChild(obj);
+}
+
+const spawn =
+setInterval(criarObjeto,700);
+
+const loop =
+setInterval(()=>
+{
+    if(acabou)
+        return;
+    
+
+    scrollEstrada += 8;
+    
+    document.querySelectorAll(".estrada")
+    .forEach(estrada =>
+    {
+        estrada.style.backgroundPositionY =
+            scrollEstrada + "px";
+    });
+
+    const itens =
+        document.querySelectorAll(".item");
+
+    itens.forEach(item=>
+    {
+        let y =
+            parseFloat(
+                item.style.top
+            );
+
+        y += 7;
+
+        item.style.top =
+            y + "px";
+
+        const playerRect =
+            player.getBoundingClientRect();
+
+        const itemRect =
+            item.getBoundingClientRect();
+
+        const colisao =
+            playerRect.left < itemRect.right &&
+            playerRect.right > itemRect.left &&
+            playerRect.top < itemRect.bottom &&
+            playerRect.bottom > itemRect.top;
+
+        if(colisao)
+        {
+            if(item.dataset.tipo==="livro")
+            {
+                entregas++;
+
+                entregasEl.textContent =
+                    entregas;
+            }
+            else
+            {
+                vidas--;
+
+                atualizarVidas();
+
+                if(vidas<=0)
+                {
+                    finalizar();
+                }
+            }
+
+            item.remove();
+            return;
+        }
+
+        if(y > window.innerHeight)
+        {
+            item.remove();
+        }
+    });
+
+},16);
+
+const cronometro =
+setInterval(()=>
+{
+    if(acabou)
+        return;
+
+    tempo--;
+
+    tempoEl.textContent =
+        tempo;
+
+    if(tempo<=0)
+    {
+        finalizar();
+    }
+
+},1000);
+
+function calcularMoedas()
+{
+    return entregas*0.5;
+    
+    if(entregas >= 12)
+        return 5;
+
+    if(entregas >= 9)
+        return 4;
+
+    if(entregas >= 6)
+        return 3;
+
+    if(entregas >= 3)
+        return 2;
+
+    return 1;
+}
+
+function finalizar()
+{
+    if(acabou)
+        return;
+
+    acabou = true;
+
+    clearInterval(spawn);
+    clearInterval(loop);
+    clearInterval(cronometro);
+
+    const moedas =
+        calcularMoedas();
+
+    resultado.style.display =
+        "flex";
+
+    textoFinal.textContent =
+        `${entregas} entrega(s) realizadas`;
+
+    moedasEl.textContent =
+        `+${moedas} MOEDA${moedas>1?"S":""}`;
+}
+
+</script>
+
+</body>
+</html>
