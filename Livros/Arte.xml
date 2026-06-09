@@ -22,7 +22,7 @@
 
     <livro>
         <isbn>9786556910475</isbn>
-        <titulo></titulo>
+        <titulo>O que fazem os artistas</titulo>
         <serie></serie>
         <numeroSerie></numeroSerie>
         <sinopse></sinopse>
@@ -31,7 +31,7 @@
 
     <livro>
         <isbn>9786559791194</isbn>
-        <titulo></titulo>
+        <titulo>Como os artistas veem o mundo</titulo>
         <serie></serie>
         <numeroSerie></numeroSerie>
         <sinopse></sinopse>
@@ -40,7 +40,7 @@
 
     <livro>
         <isbn>9786560920408</isbn>
-        <titulo></titulo>
+        <titulo>Desenhar perspectivas</titulo>
         <serie></serie>
         <numeroSerie></numeroSerie>
         <sinopse></sinopse>
