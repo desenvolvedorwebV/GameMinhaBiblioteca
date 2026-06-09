@@ -48,13 +48,25 @@ E há ainda aqueles que produzem arte justamente para determinar o que é arte �
         <titulo>Como os artistas veem o mundo</titulo>
         <serie></serie>
         <numeroSerie></numeroSerie>
-        <sinopse><![CDATA Frida Kahlo nos ajuda a ver através da dor. Rembrandt dá uma aula sobre autopercepção. David Hockney abre nossos olhos para a luminosidade da natureza. Jean-Michel Basquiat nos tira da inércia para que possamos ver a realidade em toda a sua complexidade selvagem. Eva Hesse nos mostra o absurdo da vida humana.
+        <sinopse><![CDATA[Frida Kahlo nos ajuda a ver através da dor. Rembrandt dá uma aula sobre autopercepção. David Hockney abre nossos olhos para a luminosidade da natureza. Jean-Michel Basquiat nos tira da inércia para que possamos ver a realidade em toda a sua complexidade selvagem. Eva Hesse nos mostra o absurdo da vida humana.
 Depois do sucesso de Isso é arte? e Pense como um artista , Will Gompertz agora nos convida a aprender com os grandes artistas como ativar nossa sensibilidade para enxergar o mundo além da nossa visão cotidiana. Enquanto passamos a maior parte do tempo correndo de um lugar para outro e ignorando os maravilhosos fenômenos da vida, os artistas observam o mundo com olhos experientes e interessados. 
 Com seu característico talento de contador de histórias, o autor traça o perfil desses artistas geniais, analisando a maneira única que têm de expressar a vida em sua arte. Das esculturas xochipala a Cy Twombly, de Rubens e Fra Angelico a Georgia O’Keefe e Tracey Emin, descobrimos as inúmeras e potentes formas de enxergar o mundo e traduzi-lo.
 Em linguagem coloquial, sem academicismos e fartamente ilustrado, Como os artistas veem o mundo é um mergulho divertido e esclarecedor na história da arte.
 ]]>
         </sinopse>
         <capa>https://raw.githubusercontent.com/desenvolvedorwebV/GameMinhaBiblioteca/refs/heads/main/Imagens/Livros/Arte/978-6559791194.jpg</capa>
+    </livro>
+
+    <livro>
+        <isbn>9786560920408</isbn>
+        <titulo>Desenhar perspectivas</titulo>
+        <serie></serie>
+        <numeroSerie></numeroSerie>
+        <sinopse><![CDATA Os princípios fundamentais para desenhar figuras, objetos e cenas em perspectiva são abordados de forma simples e surpreendentes neste livro, a partir de uma série de conceitos básicos apresentados pelo autor e ilustrados com muitos exemplos e exercícios.
+Dominar tecnicamente as perspectivas na prática do desenho é algo que envolve certa complexidade, mas que uma vez aprendido terá valor eternamente e será uma ferramenta valiosa para incrementar suas habilidades de desenho.
+]]>
+        </sinopse>
+        <capa>https://raw.githubusercontent.com/desenvolvedorwebV/GameMinhaBiblioteca/refs/heads/main/Imagens/Livros/Arte/978-6560920408.jpg</capa>
     </livro>
 
     <livro>
